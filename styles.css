@@ -3,6 +3,8 @@
 body {
   background-image: url('Floral.jpg');
   text-align: center;
+  /*height: 50%;
+  overflow: hidden;*/
 }
 
 .clearfix {
@@ -11,24 +13,54 @@ body {
 
 .container {
   width: 75%;
+  height: 90%;
   overflow: auto;
-  margin: 40px auto;
+  margin: auto;
   background: rgba(255, 255, 255, 0.3);
 
 }
   table {
     border: 3px solid black;
     margin: auto;
+    /*height: 30em;
+    width:30em;*/
     /*width: 50%;*/
   }
   td {
   background: white;
-  font-size: 8rem;
+  font-size: 100px;
   border: 3px solid black;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   text-align: center;
   cursor: pointer;
   font-family: 'Amatic SC', cursive;
-  color: #B6D5EA;
+  color: rgb(182, 213, 234)
+}
+
+td:hover, #reset:hover {
+  background: rgb(182, 213, 234);
+}
+
+#reset {
+  border: 0;
+  background: green;
+  width: 70%;
+  padding: 15px;
+    font-family: 'Amatic SC', cursive;
+
+}
+
+.o {
+  color: rgb(255, 103, 59) !important;
+}
+
+.x{
+  color: rgb(114, 22, 156) !important;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 20px;
 }
