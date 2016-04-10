@@ -4,8 +4,6 @@ body {
   background-image: url('Floral.jpg');
   text-align: center;
   font-family: 'Amatic SC', cursive;
-  /*height: 50%;
-  overflow: hidden;*/
 }
 
 
@@ -16,15 +14,11 @@ body {
   overflow: auto;
   margin: 35px auto;
   background: rgba(255, 255, 255, 0.3);
-  /*border-radius: 20px;*/
-
 }
+
 table {
   border: 3px solid black;
   margin: 30px auto 0 auto;
-  /*height: 30em;
-  width:30em;*/
-  /*width: 50%;*/
 }
 
 td {
@@ -52,7 +46,6 @@ td:hover, #reset:hover {
   font-family: 'Amatic SC', cursive;
   margin-top: 0;
   margin-bottom: 5px;
-
 }
 
 .o {
