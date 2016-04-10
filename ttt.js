@@ -62,7 +62,7 @@
         $('td').removeClass('o');
         $('td').removeClass('x');
         turn = 0;
-      } else if(turns == 9) {
+      } else if(turn == 9) {
         alert("Cat's Game!");
         $('td').text(' ');
         $('td').removeClass('disable');
