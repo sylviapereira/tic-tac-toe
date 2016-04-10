@@ -1,8 +1,7 @@
  $(document).on('ready', function() {
-   var x = "x";
-   var o = "o";
+
   var turn = 0;
-  // var winningCombos = [[1,2,3], [4,5,6], [7,8,9], [1,4,7], [2,5,8], [3,6,9], [1,5,9], [3,5,7]];
+
   var cell1 = $('#cell-1');
   var cell2 = $('#cell-2');
   var cell3 = $('#cell-3');
@@ -19,16 +18,17 @@
 
     if ( turn % 2 ) {
       self.html('O').addClass('o');
-    }else{
+    } else {
       self.html('X').addClass('x');
     }
 
     self.addClass('disable');
-
-
     turn++;
+    checkForWinner();
+  });
 
-    checkForWinner()
+  $('#reset').on('click', function() {
+    reset();
   });
 
   function checkForWinner() {
@@ -41,12 +41,8 @@
         cell1.hasClass('o') && cell5.hasClass('o') && cell9.hasClass('o') ||
         cell3.hasClass('o') && cell5.hasClass('o') && cell7.hasClass('o')
     ) {
-      alert('O WINS!');
-      $('td').text(' ');
-      $('td').removeClass('disable');
-      $('td').removeClass('o');
-      $('td').removeClass('x');
-      turn = 0;
+        alert('O WINS!');
+        reset();
     } else if (cell1.hasClass('x') && cell2.hasClass('x') && cell3.hasClass('x') ||
           cell4.hasClass('x') && cell5.hasClass('x') && cell6.hasClass('x') ||
           cell7.hasClass('x') && cell8.hasClass('x') && cell9.hasClass('x') ||
@@ -57,20 +53,19 @@
           cell3.hasClass('x') && cell5.hasClass('x') && cell7.hasClass('x')
       ) {
         alert('X WINS!');
-        $('td').text(' ');
-        $('td').removeClass('disable');
-        $('td').removeClass('o');
-        $('td').removeClass('x');
-        turn = 0;
+        reset();
       } else if(turn == 9) {
         alert("Cat's Game!");
-        $('td').text(' ');
-        $('td').removeClass('disable');
-        $('td').removeClass('o');
-        $('td').removeClass('x');
-        turn = 0;
-      }
+        reset();
+    }
+  };
 
-    };
+  function reset() {
+    $('td').text(' ');
+    $('td').removeClass('disable');
+    $('td').removeClass('o');
+    $('td').removeClass('x');
+    turn = 0;
+  }
 
-  });
+});
