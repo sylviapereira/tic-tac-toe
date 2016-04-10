@@ -1,15 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
+
 body {
-  background-image: url('/Floral.eps');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-image: url('Floral.jpg');
+
+  /*background-repeat: no-repeat;*/
   color:
 }
+  table {
+    border: 3px solid black;
+  }
   td {
+    background: white;
   font-size: 150px;
   border: 3px solid black;
   width: 300px;
   height: 300px;
   text-align: center;
   cursor: pointer;
+  font-family: 'Amatic SC', cursive;
+  color: #B6D5EA;
 }
