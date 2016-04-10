@@ -1,0 +1,15 @@
+body {
+  background-image: url('/Floral.eps');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color:
+}
+  td {
+  font-size: 150px;
+  border: 3px solid black;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  cursor: pointer;
+}
