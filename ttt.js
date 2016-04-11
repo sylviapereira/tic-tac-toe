@@ -15,7 +15,9 @@
   $('td').on('click', function() {
 
     var self = $(this);
-
+    if($(this).hasClass('disable')){
+    alert('This spot is taken!');
+  } else {
     if ( turn % 2 ) {
       self.html('O').addClass('o');
     } else {
@@ -25,6 +27,7 @@
     self.addClass('disable');
     turn++;
     checkForWinner();
+    };
   });
 
   $('#reset').on('click', function() {
